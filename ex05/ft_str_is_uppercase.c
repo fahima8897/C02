@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboumell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/14 11:43:41 by fboumell          #+#    #+#             */
-/*   Updated: 2021/02/14 15:35:43 by fboumell         ###   ########.fr       */
+/*   Created: 2021/02/14 16:39:29 by fboumell          #+#    #+#             */
+/*   Updated: 2021/02/14 16:44:47 by fboumell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	conditions(char c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 65 && c <= 90)
 		return (1);
 	return (0);
 }
 
-int	ft_str_is_numeric(char *str)
+int	ft_str_is_uppercase(char *str)
 {
 	int i;
 
@@ -31,4 +31,11 @@ int	ft_str_is_numeric(char *str)
 		i++;
 	}
 	return (1);
+}
+
+int main()
+{
+	char tab[] = "\0";
+	printf("%d\n", ft_str_is-uppercase(tab));
+	return 0;
 }

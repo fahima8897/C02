@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboumell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/14 11:43:41 by fboumell          #+#    #+#             */
-/*   Updated: 2021/02/14 15:35:43 by fboumell         ###   ########.fr       */
+/*   Created: 2021/02/11 13:18:32 by fboumell          #+#    #+#             */
+/*   Updated: 2021/02/11 13:54:57 by fboumell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	conditions(char c)
+char *ft_strcpy(char *dest, char *src);
+
+int main()
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	char src[] = "hello world";
+	char dest[26];
+
+	printf("%s\n", ft_strcpy(dest, src));
+	return 0;
 }
 
-int	ft_str_is_numeric(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (!(conditions(str[i])))
-			return (0);
-		i++;
-	}
-	return (1);
-}
