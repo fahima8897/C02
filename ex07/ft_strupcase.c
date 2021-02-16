@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboumell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/11 13:55:34 by fboumell          #+#    #+#             */
-/*   Updated: 2021/02/15 10:15:16 by fboumell         ###   ########.fr       */
+/*   Created: 2021/02/15 16:29:49 by fboumell          #+#    #+#             */
+/*   Updated: 2021/02/16 08:38:08 by fboumell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n);
-
-int main()
+char	*ft_strupcase(char *str)
 {
-	char *src = "hello world";
-	char dest[100];
+	int i;
 
-	printf("%s\n", ft_strncpy(dest, src, 4));
-	return 0;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 97 && str[i] <= 122)
+			str[i] = str[i] -32;
+	i++;
+	}
+	return (str);
+}
+
+int	main()
+{
+	char tab[] = "hello girl";
+	printf("%s\n", ft_strupcase(tab));
+	return 0;	
 }

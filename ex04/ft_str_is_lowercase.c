@@ -6,7 +6,7 @@
 /*   By: fboumell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 15:40:17 by fboumell          #+#    #+#             */
-/*   Updated: 2021/02/14 16:38:06 by fboumell         ###   ########.fr       */
+/*   Updated: 2021/02/16 09:11:22 by fboumell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	conditions(char c)
 	return (0);
 }
 
-int	ft_str_lowercase(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	int i;
 

@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fboumell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/11 13:55:34 by fboumell          #+#    #+#             */
-/*   Updated: 2021/02/15 10:15:16 by fboumell         ###   ########.fr       */
+/*   Created: 2021/02/15 13:15:56 by fboumell          #+#    #+#             */
+/*   Updated: 2021/02/15 13:39:45 by fboumell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n);
+char	*ft_strlowcase(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 65 && str[i] <= 90)
+			str[i] = str[i] + 32;
+	i++;
+	}
+	return (str);
+}
 
 int main()
 {
-	char *src = "hello world";
-	char dest[100];
-
-	printf("%s\n", ft_strncpy(dest, src, 4));
+	char mot[] = "helo";
+	printf("%s\n", ft_strlowcase(mot));
 	return 0;
 }
